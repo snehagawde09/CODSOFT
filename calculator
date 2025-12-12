@@ -1,1 +1,47 @@
+def calculator():
+    print("\n===== SIMPLE CALCULATOR =====")
+
+    
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+    except ValueError:
+        print("Invalid number! Please enter digits only.")
+        return
+
+    
+    print("\nChoose an operation:")
+    print("1. Addition (+)")
+    print("2. Subtraction (-)")
+    print("3. Multiplication (*)")
+    print("4. Division (/)")
+
+    choice = input("Enter choice (1/2/3/4): ")
+
+    print("\n--------------------------------")
+
+    
+    if choice == "1":
+        print(f"Result: {num1 + num2}")
+
+    elif choice == "2":
+        print(f"Result: {num1 - num2}")
+
+    elif choice == "3":
+        print(f"Result: {num1 * num2}")
+
+    elif choice == "4":
+        if num2 == 0:
+            print("Error: Cannot divide by zero!")
+        else:
+            print(f"Result: {num1 / num2}")
+
+    else:
+        print("Invalid operation choice!")
+
+    print("--------------------------------\n")
+
+
+
+calculator()
 
